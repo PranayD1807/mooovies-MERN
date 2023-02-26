@@ -3,23 +3,30 @@ Fullstack Movies Application
 
 Features :
 
-Movies List
-Movie Details
-Reviews
-Users
-Responsive
+<ul>
+<li>Movies List</li>
+<li>Movie Details</li>
+<li>Reviews</li>
+<li>Users</li>
+<li>Responsive</li>
+</ul>
 
 Technologies used:
 
-Create React App
-Material UI
-Mongoose
-ExpressJS
-Express Validator
-React Router
-Formik
-Yup
-Axios
-ThemovieDB
-Swiper
-JWT
+
+<ul>
+<li>Create React App</li>
+<li>Material UI</li>
+<li>Mongoose</li>
+<li>ExpressJS</li>
+<li>Express Validator</li>
+<li>React Router</li>
+<li>Formik</li>
+<li>Yup</li>
+<li>Axios</li>
+<li>ThemovieDB API</li>
+<li>Swiper</li>
+<li>jwt</li>
+</ul>
+
+
