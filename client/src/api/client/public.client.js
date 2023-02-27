@@ -14,7 +14,6 @@ publicClient.interceptors.request.use(async (config) => {
     ...config,
     Headers: {
       "Content-Type": "application/json",
-      //   Authorization: `Bearer ${localStorage.getItem("actkn")}`,
     },
   };
 });
