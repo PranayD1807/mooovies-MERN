@@ -19,7 +19,7 @@ mongoose
   .set("strictQuery", false)
   .connect(process.env.MONGODB_URL)
   .then(() => {
-    console.log("🔥M-DB Connected 🔥");
+    console.log("🔥 M-DB Connected 🔥");
     server.listen(port, () => {
       console.log(`Server is listening on port ${port}`);
     });
