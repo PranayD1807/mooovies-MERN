@@ -3,8 +3,8 @@ import { Outlet } from "react-router-dom";
 const MainLayout = () => {
   return (
     <>
-      {/* global loading */}
-      {/* global loading */}
+      {/* Global loading */}
+      {/* Global loading */}
 
       {/* login modal */}
       {/* login modal */}

@@ -1,7 +1,7 @@
 import React from "react";
 
 const MediaDetail = () => {
-  return <div></div>;
+  return <div>MediaDetail</div>;
 };
 
 export default MediaDetail;

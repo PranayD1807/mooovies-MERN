@@ -35,6 +35,7 @@ const themeConfigs = {
               default: colors.grey["100"],
             },
           };
+
     return createTheme({
       palette: {
         mode,

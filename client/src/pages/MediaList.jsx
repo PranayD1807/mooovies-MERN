@@ -1,7 +1,7 @@
 import React from "react";
 
 const MediaList = () => {
-  return <div></div>;
+  return <div>MediaList</div>;
 };
 
 export default MediaList;

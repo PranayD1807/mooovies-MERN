@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 export const themeModeSlice = createSlice({
   name: "ThemeMode",
   initialState: {
@@ -12,4 +13,5 @@ export const themeModeSlice = createSlice({
 });
 
 export const { setThemeMode } = themeModeSlice.actions;
+
 export default themeModeSlice.reducer;
