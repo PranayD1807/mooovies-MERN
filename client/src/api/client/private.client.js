@@ -4,7 +4,7 @@ import queryString from "query-string";
 
 const localHostUrl = "http://127.0.0.1:5000/";
 const prodUrl = "https://mooovies-server.vercel.app/";
-const baseURL = `${prodUrl}/api/v1/`;
+const baseURL = `${prodUrl}api/v1/`;
 const privateClient = axios.create({
   baseURL,
   paramsSerializer: {
