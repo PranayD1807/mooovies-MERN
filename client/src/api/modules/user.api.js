@@ -1,8 +1,8 @@
-import privateClient from "../client/public.client.api";
+import privateClient from "../client/private.client.api";
 import publicClient from "../client/public.client.api";
 
-const userEndPoints = {
-  singin: "user/signin",
+const userEndpoints = {
+  signin: "user/signin",
   signup: "user/signup",
   getInfo: "user/info",
   passwordUpdate: "user/update-password",
@@ -11,10 +11,12 @@ const userEndPoints = {
 const userApi = {
   signin: async ({ username, password }) => {
     try {
-      const response = await publicClient.post(userEndPoints.singin, {
+      console.log("send request");
+      const response = await publicClient.post(userEndpoints.signin, {
         username,
         password,
       });
+
       return { response };
     } catch (err) {
       console.log("err");
@@ -23,12 +25,13 @@ const userApi = {
   },
   signup: async ({ username, password, confirmPassword, displayName }) => {
     try {
-      const response = await publicClient.post(userEndPoints.signup, {
+      const response = await publicClient.post(userEndpoints.signup, {
         username,
         password,
         confirmPassword,
         displayName,
       });
+
       return { response };
     } catch (err) {
       return { err };
@@ -36,7 +39,8 @@ const userApi = {
   },
   getInfo: async () => {
     try {
-      const response = await privateClient.get(userEndPoints.getInfo, {});
+      const response = await privateClient.get(userEndpoints.getInfo);
+
       return { response };
     } catch (err) {
       return { err };
@@ -44,15 +48,17 @@ const userApi = {
   },
   passwordUpdate: async ({ password, newPassword, confirmNewPassword }) => {
     try {
-      const response = await privateClient.put(userEndPoints.passwordUpdate, {
+      const response = await privateClient.put(userEndpoints.passwordUpdate, {
         password,
         newPassword,
         confirmNewPassword,
       });
+
       return { response };
     } catch (err) {
       return { err };
     }
   },
 };
+
 export default userApi;
