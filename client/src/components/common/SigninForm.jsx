@@ -34,6 +34,9 @@ const SigninForm = ({ switchAuthState }) => {
       const { response, err } = await userApi.signin(values);
       setIsLoginRequest(false);
 
+      console.log(response);
+      console.log(err);
+
       if (response) {
         signinForm.resetForm();
         dispatch(setUser(response));

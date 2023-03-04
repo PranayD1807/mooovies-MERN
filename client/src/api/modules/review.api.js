@@ -15,8 +15,8 @@ const reviewApi = {
         content,
       });
       return { response };
-    } catch (error) {
-      return { error };
+    } catch (err) {
+      return { err };
     }
   },
   remove: async ({ reviewId }) => {
@@ -25,16 +25,16 @@ const reviewApi = {
         reviewId,
       });
       return { response };
-    } catch (error) {
-      return { error };
+    } catch (err) {
+      return { err };
     }
   },
   getList: async () => {
     try {
       const response = await privateClient.get(reviewEndpoints.list, {});
       return { response };
-    } catch (error) {
-      return { error };
+    } catch (err) {
+      return { err };
     }
   },
 };

@@ -1,5 +1,5 @@
-import privateClient from "../client/public.client";
-import publicClient from "../client/public.client";
+import privateClient from "../client/public.client.api";
+import publicClient from "../client/public.client.api";
 
 const userEndPoints = {
   singin: "user/signin",
@@ -16,8 +16,9 @@ const userApi = {
         password,
       });
       return { response };
-    } catch (error) {
-      return { error };
+    } catch (err) {
+      console.log("err");
+      return { err };
     }
   },
   signup: async ({ username, password, confirmPassword, displayName }) => {
@@ -29,16 +30,16 @@ const userApi = {
         displayName,
       });
       return { response };
-    } catch (error) {
-      return { error };
+    } catch (err) {
+      return { err };
     }
   },
   getInfo: async () => {
     try {
       const response = await privateClient.get(userEndPoints.getInfo, {});
       return { response };
-    } catch (error) {
-      return { error };
+    } catch (err) {
+      return { err };
     }
   },
   passwordUpdate: async ({ password, newPassword, confirmNewPassword }) => {
@@ -49,8 +50,8 @@ const userApi = {
         confirmNewPassword,
       });
       return { response };
-    } catch (error) {
-      return { error };
+    } catch (err) {
+      return { err };
     }
   },
 };
