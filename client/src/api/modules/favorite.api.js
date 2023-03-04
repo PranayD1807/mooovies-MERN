@@ -1,4 +1,4 @@
-import privateClient from "../client/private.client.api";
+import privateClient from "../client/private.client";
 
 const favoriteEndpoints = {
   list: "user/favorites",
