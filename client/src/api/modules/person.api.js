@@ -10,8 +10,8 @@ const personApi = {
         personEndpoints.detail({ personId })
       );
       return { response };
-    } catch (error) {
-      return { error };
+    } catch (err) {
+      return { err };
     }
   },
   medias: async ({ personId }) => {
@@ -20,8 +20,8 @@ const personApi = {
         personEndpoints.medias({ personId })
       );
       return { response };
-    } catch (error) {
-      return { error };
+    } catch (err) {
+      return { err };
     }
   },
 };
