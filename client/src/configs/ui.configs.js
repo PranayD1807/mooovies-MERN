@@ -36,7 +36,7 @@ const uiConfigs = {
       position: "relative",
       backgroundSize: "cover",
       backgroundPosition: "center",
-      backgroundColor: "darkgrey",
+      backgroundColor: "#FF4F4B",
       backgroundImage: `url(${imgPath})`,
     }),
   },

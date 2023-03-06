@@ -5,6 +5,7 @@ const favoriteEndpoints = {
   add: "user/favorites",
   remove: ({ favoriteId }) => `user/favorites/${favoriteId}`,
 };
+
 const favoriteApi = {
   getList: async () => {
     try {
@@ -23,6 +24,7 @@ const favoriteApi = {
         mediaPoster,
         mediaRate,
       });
+
       return { response };
     } catch (err) {
       return { err };
@@ -31,12 +33,14 @@ const favoriteApi = {
   remove: async ({ favoriteId }) => {
     try {
       const response = await privateClient.delete(
-        favoriteEndpoints.delete({ favoriteId })
+        favoriteEndpoints.remove({ favoriteId })
       );
+
       return { response };
     } catch (err) {
       return { err };
     }
   },
 };
+
 export default favoriteApi;
